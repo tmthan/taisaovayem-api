@@ -1,7 +1,7 @@
 import { Entity, Column } from 'typeorm';
 import { BaseEntity } from 'src/database/entities';
 import { IsEmail } from 'class-validator';
-import { UserStatus } from '../types';
+import { UserRole, UserStatus } from '../types';
 
 @Entity('user')
 export class User extends BaseEntity {
@@ -19,5 +19,5 @@ export class User extends BaseEntity {
   status!: UserStatus;
 
   @Column()
-  role!: string;
+  role!: UserRole;
 }

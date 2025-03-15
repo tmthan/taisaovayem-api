@@ -5,6 +5,7 @@ import { RedisCacheModule } from './shared/cache';
 import { ConfigModule } from '@nestjs/config';
 import { PostgresModule } from './database/postgres.module';
 import { AuthModule } from './modules/auth';
+import { PostModule } from './modules/post/post.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { AuthModule } from './modules/auth';
     PostgresModule,
     RedisCacheModule,
     AuthModule,
+    PostModule,
   ],
   controllers: [AppController],
   providers: [AppService],
